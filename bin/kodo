@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+# Launcher Kodo (tanpa pip): kodo run examples/hello.kd
+DIR="$(cd "$(dirname "$(readlink -f "$0")")/.." && pwd)"
+PYTHONPATH="$DIR" exec python3 -m kodo "$@"

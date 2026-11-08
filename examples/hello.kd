@@ -1,0 +1,33 @@
+// Hello Kodo
+import "https://fonts.googleapis.com/css2?family=Poppins"
+
+net judul = "Halo Dunia dari Kodo!"
+
+void sapa(nama) {
+   print "Halo, {nama}!"
+   return "Halo, " + nama
+}
+
+void.screen main {
+   title ; t1.judul
+   text ; t2."Aplikasi pertamamu dengan bahasa Kodo."
+   nama ; input("Nama kamu : ")
+   button ; b1."Sapa aku".onclick.show.sapa(nama)
+   button ; b2."Lihat tentang".onclick.active.tentang()
+}
+
+void.screen tentang {
+   text ; x."Kodo v0.1 - ditulis dengan Python"
+   button ; kembali."Kembali".onclick.active.back()
+}
+
+void.screen style {
+   t1 ; {
+      font ; "https://fonts.googleapis.com/css2?family=Poppins"
+      color ; #6d4aff
+      set.size ; 30px
+   }
+   button ; {
+      radius ; 14
+   }
+}

@@ -1,0 +1,45 @@
+// Counter + state + event klik/tahan + makevisible
+state count = 0
+
+void tambah() {
+   count = count + 1
+}
+
+void kurang() {
+   if (count > 0) {
+      count = count - 1
+   } else {
+      print "Sudah nol!"
+   }
+}
+
+void reset() {
+   count = 0
+   print "Direset"
+}
+
+void.screen main {
+   title ; judul."Counter Kodo"
+   text ; angka."Hitungan : {count}"
+   row {
+      button ; plus."+ Tambah".onclick.active.tambah()
+      button ; minus."- Kurang".onclick.active.kurang()
+   }
+   button ; rst."Reset (tahan)".onhold.active.reset()
+   button ; rahasia."Tampilkan rahasia".onclick.makevisible.pesan()
+   text ; pesan."Kamu menemukan pesan rahasia!"
+   if (count >= 5) {
+      text ; bonus."Wah, sudah {count}x klik!"
+   }
+}
+
+void.screen style {
+   angka ; {
+      set.size ; 22px
+      bold ; true
+   }
+   button ; {
+      background ; #6d4aff
+      color ; white
+   }
+}

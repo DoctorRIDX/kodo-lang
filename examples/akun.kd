@@ -1,0 +1,16 @@
+// Contoh import file .txt dan operator "in"
+import daftar-akun.txt
+
+void account() {
+   button ; login."Nama : "
+   if (login in daftar-akun.txt) {
+      text ; sapa.login
+   } else {
+      text ; gagal."Nama tidak terdaftar"
+   }
+}
+
+void.screen main {
+   title ; t."Login Kodo"
+   text ; pembuka."Welcome ".show.account()
+}

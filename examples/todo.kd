@@ -1,0 +1,31 @@
+// To-do list: state array, input, list, loop
+state tugas = []
+state baru = ""
+
+void tambah() {
+   if (baru != "") {
+      push(tugas, baru)
+      baru = ""
+   } else {
+      print "Isi dulu tugasnya!"
+   }
+}
+
+void hapus_terakhir() {
+   if (len(tugas) > 0) {
+      pop(tugas)
+   }
+}
+
+void.screen main {
+   title ; judul."Daftar Tugas"
+   baru ; input("Tugas baru : ")
+   row {
+      button ; add."Tambah".onclick.active.tambah()
+      button ; del."Hapus terakhir".onclick.active.hapus_terakhir()
+   }
+   text ; jumlah."Total: {tugas.length} tugas"
+   list tugas {
+      text item
+   }
+}

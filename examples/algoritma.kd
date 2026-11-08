@@ -1,0 +1,25 @@
+// Mode skrip: loop, fungsi, rekursi, array  ->  kodo run examples/algoritma.kd
+void fakt(n) {
+   if (n <= 1) {
+      return 1
+   }
+   return n * fakt(n - 1)
+}
+
+void main() {
+   net total = 0
+   loop.i 5 {
+      total += i
+   }
+   print "Jumlah 1..5 = {total}"
+   print "5! = " + fakt(5)
+   net buah = ["apel", "jeruk", "mangga"]
+   loop.for b.buah {
+      if (b == "jeruk") {
+         continue
+      }
+      print "- " + upper(b)
+   }
+   net umur = 17
+   if (umur >= 18) then print "dewasa" else print "belum dewasa"
+}
